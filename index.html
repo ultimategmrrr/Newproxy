@@ -1,902 +1,517 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#07090b" />
-  <meta name="description" content="₹4999 Redeem Code demo landing page." />
-  <title>₹4999 Redeem Code</title>
+  <meta name="theme-color" content="#070b18" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Garena Free Fire Team — Proxy Server</title>
+  <meta name="description" content="Watch the preview and explore the latest server experience. Download Proxy Server Free." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Garena Free Fire Team — Proxy Server" />
+  <meta property="og:description" content="Watch the preview and explore the latest server experience." />
+  <meta property="og:image" content="https://www.image2url.com/r2/default/files/1790946147407-02b57c29-c512-4240-af06-19f83ea5b1a4.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="https://www.image2url.com/r2/default/files/1790946147407-02b57c29-c512-4240-af06-19f83ea5b1a4.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #07090b;
-      --text: #f4f7fb;
-      --muted: #8b94a3;
-      --muted-2: #6b7380;
-      --green: #2ee57a;
-      --cyan: #3ce7d8;
-      --orange: #ff8a2b;
-      --red: #ff3d4a;
-      --purple: #8a5cff;
-      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --text: #f5f8ff;
+      --muted: #9aabc4;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 
     html, body {
-      background: #07090b;
+      margin: 0;
+      padding: 0;
+      background: #070b16;
       color: var(--text);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      overflow-x: hidden;
+      font-family: "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
     }
 
     body {
       background:
-        radial-gradient(1000px 420px at 50% -80px, rgba(46, 229, 122, 0.07), transparent 55%),
-        #07090b;
+        radial-gradient(820px 420px at 50% -8%, rgba(62, 150, 255, 0.22), transparent 58%),
+        radial-gradient(620px 380px at 90% 18%, rgba(132, 86, 255, 0.16), transparent 52%),
+        linear-gradient(180deg, #071422 0%, #0b1830 34%, #120c26 78%, #0a0914 100%);
     }
 
-    button { font-family: inherit; cursor: pointer; }
-
-    .page {
-      width: min(560px, 100%);
+    .wrap {
+      width: min(440px, 100%);
       margin: 0 auto;
-      padding: 8px 14px calc(18px + var(--safe-bottom));
+      padding: calc(10px + env(safe-area-inset-top)) 16px calc(22px + env(safe-area-inset-bottom));
     }
 
-    .topbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 10px 2px 10px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 9px;
-      min-width: 0;
-    }
-
-    .dots { display: flex; gap: 5px; flex-shrink: 0; }
-    .dots span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      display: block;
-    }
-    .dots span:nth-child(1) { background: #35e07a; box-shadow: 0 0 8px #35e07a; }
-    .dots span:nth-child(2) { background: #f0c12a; }
-    .dots span:nth-child(3) { background: #ff7a2b; }
-    .dots span:nth-child(4) { background: #9b5cff; }
+    .brand { text-align: center; }
 
     .brand h1 {
-      font-size: clamp(13px, 3.6vw, 16px);
-      letter-spacing: 0.08em;
+      margin: 0;
+      font-size: 26px;
+      line-height: 1.1;
+      letter-spacing: -0.4px;
       font-weight: 800;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .live-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      border: 1.5px solid rgba(46, 229, 122, 0.55);
-      background: rgba(14, 40, 26, 0.7);
-      color: var(--green);
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      box-shadow: 0 0 16px rgba(46, 229, 122, 0.18);
-      flex-shrink: 0;
-    }
-
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 8px var(--green);
-      animation: pulse 1.6s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.35); opacity: 0.55; }
-    }
-
-    .features {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: #7f8a78;
-      font-size: 12.5px;
-      padding: 2px 0 12px;
-    }
-    .features .sep { color: #3d4540; }
-    .features strong { color: #a7b3a8; font-weight: 600; }
-
-    .step {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 2px 0 10px;
-      color: #cfd6cf;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-    .step .bar {
-      width: 28px;
-      height: 3px;
-      border-radius: 99px;
-      background: linear-gradient(90deg, var(--orange), #ffd36a);
-    }
-    .step.claim { margin-top: 2px; margin-bottom: 10px; }
-    .step.claim .bar { background: linear-gradient(90deg, var(--green), var(--cyan)); }
-
-    .media-card {
-      position: relative;
-      border-radius: 18px;
-      overflow: hidden;
-      background: #0b1014;
-      border: 1px solid rgba(60, 231, 216, 0.18);
-      box-shadow: 0 0 28px rgba(46, 229, 122, 0.08), 0 18px 50px rgba(0, 0, 0, 0.45);
-      aspect-ratio: 16 / 10.2;
-    }
-
-    .media-stage {
-      width: 100%;
-      height: 100%;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at 30% 20%, rgba(60, 231, 216, 0.08), transparent 35%),
-        radial-gradient(circle at 80% 80%, rgba(138, 92, 255, 0.12), transparent 40%),
-        linear-gradient(180deg, #152029 0%, #0a1016 100%);
-    }
-    .media-stage video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      background: #000;
-    }
-    .media-card.playing .play,
-    .media-card.playing .preview-chip { opacity: 0; pointer-events: none; }
-
-    .play {
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      border: 0;
-      background: rgba(255, 255, 255, 0.94);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-      z-index: 2;
-      transition: transform 0.2s ease;
-    }
-    .play:hover { transform: scale(1.06); }
-    .play:active { transform: scale(0.96); }
-    .play svg { margin-left: 3px; }
-
-    .corner {
-      position: absolute;
-      width: 22px;
-      height: 22px;
-      border: 2px solid rgba(60, 231, 216, 0.85);
-      z-index: 2;
-    }
-    .corner.tl { top: 10px; left: 10px; border-right: 0; border-bottom: 0; border-radius: 4px 0 0 0; }
-    .corner.br { right: 10px; bottom: 10px; border-left: 0; border-top: 0; border-radius: 0 0 4px 0; }
-
-    .live-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(20, 8, 10, 0.82);
-      border: 1px solid rgba(255, 61, 74, 0.7);
-      color: #fff;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      padding: 5px 9px;
-      border-radius: 8px;
-      box-shadow: 0 0 14px rgba(255, 61, 74, 0.35);
-      z-index: 3;
-    }
-    .live-badge i {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--red);
-      box-shadow: 0 0 8px var(--red);
-      animation: pulse 1.2s ease-in-out infinite;
-    }
-
-    .preview-chip {
-      position: absolute;
-      left: 14px;
-      bottom: 12px;
-      z-index: 2;
-      font-size: 11px;
-      color: #c9d4de;
-      background: rgba(0, 0, 0, 0.45);
-      border: 1px solid rgba(255,255,255,0.08);
-      padding: 5px 8px;
-      border-radius: 8px;
-    }
-
-    .watch-copy { text-align: center; padding: 10px 8px 4px; }
-    .watch-copy h2 {
-      font-size: clamp(22px, 6vw, 28px);
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      background: linear-gradient(90deg, #ff7a1a, #ffb347 45%, #ffd27a);
+      background: linear-gradient(90deg, #6ec8ff 0%, #93b6ff 46%, #c0b0ff 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .watch-copy p {
-      margin-top: 7px;
-      color: #9aa3ad;
-      font-size: 14px;
-    }
-    .claims {
-      margin-top: 8px;
-      font-size: 14px;
-      color: #8f98a3;
-    }
-    .claims b { color: var(--green); font-weight: 800; }
 
-    .redeem-wrap { padding: 0 0 10px; margin-top: -2px; }
-    .rainbow {
-      position: relative;
-      border-radius: 24px;
-      padding: 2.5px;
-      background: conic-gradient(from 210deg, #ff2d2d, #ff8a00, #ffe14a, #2ee57a, #00e5ff, #3b82ff, #a855ff, #ff2d2d);
-      box-shadow:
-        0 0 18px rgba(255, 60, 80, 0.18),
-        0 0 22px rgba(80, 180, 255, 0.16),
-        0 12px 28px rgba(0,0,0,0.4);
+    .brand p {
+      margin: 5px 0 0;
+      font-size: 10.5px;
+      letter-spacing: 2.2px;
+      font-weight: 650;
+      color: #b7c3d8;
     }
-    .rainbow::before {
+
+    .badge {
+      margin: 12px auto 0;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(190, 210, 255, 0.16);
+      background: rgba(10, 18, 36, 0.42);
+      color: #d7e0f0;
+      font-size: 10.5px;
+      font-weight: 750;
+      letter-spacing: 1.15px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #3dff9a;
+      box-shadow: 0 0 0 0 rgba(61, 255, 154, 0.7);
+      animation: pulse 1.8s ease-out infinite;
+    }
+
+    @keyframes pulse {
+      70% { box-shadow: 0 0 0 6px rgba(61, 255, 154, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(61, 255, 154, 0); }
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.02;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+    }
+
+    .hero h2 .a { color: #fff; }
+    .hero h2 .b {
+      background: linear-gradient(90deg, #b7e4ff, #89beff 55%, #c9bcff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero .sub {
+      margin: 7px auto 0;
+      max-width: 300px;
+      color: #a9b6cc;
+      font-size: 13.5px;
+      line-height: 1.35;
+      font-weight: 500;
+    }
+
+    .player {
+      margin-top: 12px;
+      position: relative;
+      border-radius: 18px;
+      padding: 2.5px;
+      background: linear-gradient(135deg, #49b7ff, #6d78ff 48%, #b07cff);
+      box-shadow:
+        0 0 0 1px rgba(120, 180, 255, 0.16),
+        0 12px 28px rgba(0, 0, 0, 0.34);
+    }
+
+    .player-inner {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #05070d;
+      aspect-ratio: 16 / 9;
+    }
+
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      background: #05070d;
+      -webkit-touch-callout: none;
+    }
+
+    video::-webkit-media-controls-download-button,
+    video::-internal-media-controls-download-button {
+      display: none !important;
+    }
+
+    .cta { margin-top: 12px; }
+
+    .install {
+      position: relative;
+      isolation: isolate;
+      width: 100%;
+      height: 56px;
+      border: 0;
+      border-radius: 18px;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #12151e;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      background: linear-gradient(100deg, #8af4ff 0%, #d7f7ff 18%, #9eb6ff 48%, #c9b6ff 78%, #b794f6 100%);
+      background-size: 220% 100%;
+      animation: shift 2.4s ease-in-out infinite;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.35) inset,
+        0 8px 18px rgba(80, 120, 255, 0.18);
+    }
+
+    .install::before {
       content: "";
       position: absolute;
-      inset: -2px;
-      border-radius: 26px;
-      background: conic-gradient(from 210deg, #ff2d2d, #ff8a00, #2ee57a, #00e5ff, #3b82ff, #a855ff, #ff2d2d);
-      filter: blur(10px);
-      opacity: 0.28;
-      z-index: -1;
-    }
-    .redeem {
-      background: #0a0a0c;
+      inset: -6px;
       border-radius: 22px;
-      padding: 18px 16px 16px;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(110, 230, 255, 0.85), rgba(176, 150, 255, 0.8));
+      filter: blur(14px);
+      opacity: 0.75;
+      animation: glow 1.6s ease-in-out infinite;
     }
-    .redeem-top {
-      display: grid;
-      grid-template-columns: 78px 1fr;
-      gap: 14px;
+
+    .install:active { transform: scale(0.985); }
+
+    @keyframes glow {
+      0%, 100% { opacity: 0.45; transform: scale(0.98); }
+      50% { opacity: 0.95; transform: scale(1.03); }
+    }
+
+    @keyframes shift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .hint {
+      margin: 8px 0 0;
+      text-align: center;
+      color: #8ea0ba;
+      font-size: 12px;
+    }
+
+    .card {
+      margin-top: 14px;
+      border-radius: 22px;
+      padding: 14px 14px 12px;
+      background: linear-gradient(180deg, rgba(28, 36, 68, 0.72), rgba(16, 18, 40, 0.78));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.26);
+      backdrop-filter: blur(10px);
+    }
+
+    .app {
+      display: flex;
+      gap: 12px;
       align-items: center;
     }
-    .icon-tile {
-      width: 78px;
-      height: 78px;
-      border-radius: 18px;
-      background: #fff;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
+
+    img, video {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
     }
-    .icon-tile img {
+
+    .icon {
+      width: 62px;
+      height: 62px;
+      border-radius: 16px;
+      padding: 2.5px;
+      background: linear-gradient(160deg, #7ee7ff, #7aa2ff 45%, #b794f6);
+      flex: 0 0 auto;
+      box-shadow: 0 0 14px rgba(120, 190, 255, 0.45);
+      animation: iconFloat 2.4s ease-in-out infinite;
+    }
+
+    .icon img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 13px;
       display: block;
+      pointer-events: none;
+      -webkit-touch-callout: none;
+      user-select: none;
     }
-    .redeem-meta { min-width: 0; }
-    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      height: 26px;
-      padding: 0 12px;
-      border-radius: 999px;
-      font-size: 11px;
+
+    .app h3 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.3px;
       font-weight: 800;
-      letter-spacing: 0.06em;
-      color: #fff;
     }
-    .badge.new { background: #ff2d3a; }
-    .badge.premium { background: #7b4dff; }
-    .redeem h3 {
-      font-size: clamp(20px, 5.6vw, 26px);
-      line-height: 1.15;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-    }
-    .redeem .sub {
-      margin-top: 7px;
-      color: #b0b6be;
-      font-size: 15px;
+
+    .app .desc {
+      margin: 2px 0 4px;
+      color: #c5d0e4;
+      font-size: 13.5px;
       font-weight: 500;
     }
+
     .stars {
-      margin-top: 10px;
-      color: #f5c242;
-      letter-spacing: 3px;
-      font-size: 18px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #c9d4e8;
+      font-size: 12px;
+      font-weight: 600;
     }
-    .card-cta {
-      margin-top: 18px;
-      width: 100%;
-      min-height: 56px;
-      border: 0;
+
+    .stars i {
+      font-style: normal;
+      letter-spacing: 1.5px;
+      font-size: 15px;
+      background: linear-gradient(90deg, #8be4ff, #9db6ff 60%, #c4b5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: starGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0); box-shadow: 0 0 8px rgba(110, 210, 255, 0.4); }
+      50% { transform: translateY(-7px); box-shadow: 0 0 18px rgba(176, 150, 255, 0.75); }
+    }
+
+    @keyframes starGlow {
+      0%, 100% { filter: drop-shadow(0 0 1px rgba(140, 210, 255, 0.35)); }
+      50% { filter: drop-shadow(0 0 5px rgba(170, 150, 255, 0.85)); }
+    }
+
+    .chips {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .chip {
+      height: 36px;
       border-radius: 999px;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-decoration: none;
-      background: linear-gradient(180deg, #3dff8a 0%, #18d35f 52%, #0db24d 100%);
-      box-shadow:
-        0 0 0 1px rgba(90, 255, 160, 0.35),
-        0 0 18px rgba(46, 229, 122, 0.55),
-        0 0 36px rgba(22, 200, 90, 0.38),
-        0 8px 18px rgba(22, 200, 90, 0.28);
-      display: inline-flex;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(8, 12, 28, 0.28);
+      color: #d5deee;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      animation: ctaGlow 1.8s ease-in-out infinite;
-      transition: transform 0.18s ease, filter 0.18s ease;
-    }
-    .card-cta:hover { transform: scale(1.02); filter: brightness(1.08); }
-    .card-cta:active { transform: scale(0.985); }
-
-    @keyframes ctaGlow {
-      0%, 100% {
-        box-shadow:
-          0 0 0 1px rgba(90, 255, 160, 0.28),
-          0 0 14px rgba(46, 229, 122, 0.4),
-          0 0 28px rgba(22, 200, 90, 0.25),
-          0 8px 16px rgba(22, 200, 90, 0.22);
-      }
-      50% {
-        box-shadow:
-          0 0 0 2px rgba(160, 255, 200, 0.55),
-          0 0 24px rgba(46, 229, 122, 0.75),
-          0 0 48px rgba(22, 200, 90, 0.5),
-          0 10px 22px rgba(22, 200, 90, 0.35);
-      }
-    }
-
-    .comments {
-      margin-top: 4px;
-      background: #10151a;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 18px;
-      padding: 14px 12px 10px;
-    }
-    .comments-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-      padding: 0 4px;
-    }
-    .comments-head .left {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-    .comments-head .left .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--red);
-      box-shadow: 0 0 8px var(--red);
-    }
-    .watching { color: var(--muted); font-size: 13px; }
-
-    .feed {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      min-height: 280px;
-      padding: 6px 2px 8px;
-    }
-    .row {
-      display: grid;
-      grid-template-columns: 34px 1fr;
-      gap: 10px;
-      align-items: start;
-      animation: slideIn 0.45s ease both;
-    }
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .avatar {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-weight: 800;
-      font-size: 13px;
-      color: #fff;
-    }
-    .meta { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-    .meta .name { font-weight: 700; font-size: 13.5px; }
-    .meta .when { color: var(--muted-2); font-size: 12px; }
-    .msg { margin-top: 2px; color: #c5ccd4; font-size: 13.5px; line-height: 1.35; }
-
-    .more {
-      display: block;
-      width: 100%;
-      border: 0;
-      background: transparent;
-      color: #8b94a3;
-      font-size: 13px;
-      padding: 8px 0 4px;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 600;
     }
 
     footer {
+      margin-top: 16px;
       text-align: center;
-      color: #6b7380;
-      font-size: 12px;
-      padding: 16px 10px 14px;
-      line-height: 1.6;
+      color: #7f8da6;
+      font-size: 11px;
     }
 
-    .wa-wrap { padding: 0 0 8px; }
+    .scroll-space { height: 28px; }
+
+    .wa-dock {
+      margin-top: 8px;
+      padding: 0 0 calc(8px + env(safe-area-inset-bottom));
+    }
+
     .wa {
       width: 100%;
-      min-height: 52px;
-      border: 0;
-      border-radius: 999px;
-      background: #25d366;
-      color: #fff;
-      font-size: 16px;
-      font-weight: 800;
-      text-decoration: none;
+      margin: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.22);
-      transition: transform 0.18s ease;
-    }
-    .wa:hover { transform: scale(1.01); }
-    .wa:active { transform: scale(0.985); }
-
-    .toast {
-      position: fixed;
-      left: 50%;
-      bottom: calc(18px + var(--safe-bottom));
-      transform: translateX(-50%) translateY(12px);
-      background: #141a20;
-      border: 1px solid rgba(46,229,122,0.25);
-      color: #e8eef4;
-      padding: 12px 14px;
-      border-radius: 14px;
-      width: min(480px, calc(100% - 28px));
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
-      z-index: 30;
-      font-size: 13.5px;
-      line-height: 1.45;
-    }
-    .toast.show {
-      opacity: 1;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.62);
-      display: none;
-      place-items: center;
-      z-index: 40;
-      padding: 20px;
-    }
-    .modal.open { display: grid; }
-    .modal-card {
-      width: min(420px, 100%);
-      background: #12171c;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 20px;
-      text-align: center;
-    }
-    .modal-card h3 { margin-bottom: 8px; }
-    .modal-card p { color: #9aa3ad; font-size: 14px; }
-    .modal-card button {
-      margin-top: 16px;
-      width: 100%;
-      min-height: 44px;
-      border: 0;
-      border-radius: 999px;
-      background: var(--green);
-      color: #062014;
+      height: 50px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #fff;
+      background: #2fe06a;
+      font-size: 18px;
       font-weight: 800;
+      letter-spacing: -0.3px;
     }
 
-    @media (min-width: 768px) {
-      .page { padding-top: 22px; }
-      .media-card { aspect-ratio: 16 / 9.2; }
+    .wa:active { transform: scale(0.985); }
+    .wa svg { flex: 0 0 auto; }
+
+    @media (max-height: 740px) {
+      .brand h1 { font-size: 22px; }
+      .hero h2 { font-size: 28px; }
+      .hero .sub { display: none; }
+      .badge { margin-top: 8px; }
+      .hero { margin-top: 8px; }
+      .player { margin-top: 8px; }
+      .install { height: 50px; font-size: 18px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation: none !important;
-        transition: none !important;
-      }
+      .dot, .install { animation: none; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header class="topbar">
-      <div class="brand">
-        <div class="dots" aria-hidden="true">
-          <span></span><span></span><span></span><span></span>
-        </div>
-        <h1>₹4999 REDEEM CODE</h1>
-      </div>
-      <div class="live-pill" aria-label="Simulated live counter">
-        <span class="pulse-dot" aria-hidden="true"></span>
-        <span><span id="liveCount">1,292</span> LIVE</span>
-      </div>
+  <main class="wrap">
+    <header class="brand">
+      <h1>Garena Free Fire Team</h1>
+      <p>PREMIUM GAMING EXPERIENCE</p>
     </header>
 
-    <div class="features" aria-hidden="true">
-      <span>Unlimited Codes</span>
-      <span class="sep">—</span>
-      <strong>Instant Claim</strong>
+    <div class="badge"><span class="dot"></span> OFFICIAL DOWNLOAD CENTER</div>
+
+    <section class="hero">
+      <h2><span class="a">Proxy </span><span class="b">Server</span><br />For Free Fire</h2>
+      <p class="sub">Watch the preview and explore the latest server experience.</p>
+    </section>
+
+    <div class="player">
+      <div class="player-inner">
+        <video
+          id="preview"
+          controls
+          controlsList="nodownload"
+          playsinline
+          webkit-playsinline
+          autoplay
+          preload="auto"
+        ></video>
+      </div>
     </div>
 
-    <section aria-labelledby="step1">
-      <div class="step" id="step1"><span class="bar"></span> STEP 01 — WATCH</div>
+    <div class="cta">
+      <a class="install" id="installBtn" href="https://1024terabox.com/s/1hbfmpmB1cONtlnejUAq0bw">↓ &nbsp;Install Now</a>
+      <p class="hint">Tap the button above to continue to the download page.</p>
+    </div>
 
-      <div class="media-card">
-        <div class="media-stage">
-          <video
-            id="promoVideo"
-            autoplay
-            loop
-            playsinline
-            webkit-playsinline
-            preload="auto"
-            controlslist="nodownload noplaybackrate"
-          >
-            <source src="lv_0_20260928135520.mp4" type="video/mp4">
-          </video>
-          <span class="live-badge"><i></i> LIVE</span>
-          <span class="corner tl"></span>
-          <span class="corner br"></span>
-          <button class="play" id="playBtn" type="button" aria-label="Play video">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#111" aria-hidden="true">
-              <path d="M8 5v14l12-7z"/>
-            </svg>
-          </button>
-          <span class="preview-chip" id="timeChip">Tap to play</span>
+    <section class="card">
+      <div class="app">
+        <div class="icon">
+          <img src="https://www.image2url.com/r2/default/files/1790946147407-02b57c29-c512-4240-af06-19f83ea5b1a4.jpg" alt="Proxy Server" draggable="false" />
+        </div>
+        <div>
+          <h3>PROXY SERVER</h3>
+          <div class="desc">Download Proxy Server Free</div>
+          <div class="stars"><i>★★★★★</i> Premium Experience</div>
         </div>
       </div>
-
-      <div class="watch-copy">
-        <h2>WATCH FULL VIDEO</h2>
-        <p>Complete the video to unlock your redeem code</p>
-        <div class="claims"><b id="claimsCount">4,681</b> claims in last hour</div>
-      </div>
-
-      <div class="redeem-wrap">
-        <div class="rainbow">
-          <article class="redeem">
-            <div class="redeem-top">
-              <div class="icon-tile">
-                <img
-                  src="https://www.image2url.com/r2/default/files/1790583672275-f1a31aa9-b43d-4ad6-a24c-5773a44c6512.jpeg"
-                  alt="₹4999 redeem code"
-                  width="78"
-                  height="78"
-                />
-              </div>
-              <div class="redeem-meta">
-                <div class="badges">
-                  <span class="badge new">NEW</span>
-                  <span class="badge premium">PREMIUM</span>
-                </div>
-                <h3>₹4999 Redeem Code</h3>
-                <p class="sub">Redeemcode Giveaway</p>
-                <div class="stars" aria-label="5 star rating">★★★★★</div>
-              </div>
-            </div>
-            <a
-              class="card-cta"
-              href="https://terasharelink.com/s/1kqE1zUnrQcQj29DmEdfK-Q"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" aria-hidden="true">
-                <path d="M12 4v12m0 0l-5-5m5 5l5-5M5 20h14" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              GET REDEEM CODE
-            </a>
-          </article>
-        </div>
+      <div class="chips">
+        <div class="chip">⚡ Fast Experience</div>
+        <div class="chip">🎮 Gaming Ready</div>
+        <div class="chip">◆ Easy Setup</div>
+        <div class="chip">📱 Mobile Friendly</div>
       </div>
     </section>
 
-    <section aria-labelledby="step2">
-      <div class="step claim" id="step2"><span class="bar"></span> STEP 02 — CLAIM</div>
-
-    <section class="comments" aria-labelledby="commentsTitle">
-      <div class="comments-head">
-        <div class="left" id="commentsTitle">
-          <span class="dot"></span>
-          Live Comments
-        </div>
-        <div class="watching"><span id="watchingCount">1,521</span> watching</div>
-      </div>
-      <div class="feed" id="feed" aria-live="polite">
-        <div class="row">
-          <div class="avatar" style="background:#2f7bff">R</div>
-          <div>
-            <div class="meta"><span class="name">Roh6458</span><span class="when">just now</span></div>
-            <div class="msg">Ha bhai mil gaya ❤️‍🩹🫶</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#1f9d6a">H</div>
-          <div>
-            <div class="meta"><span class="name">HDMohit16</span><span class="when">just now</span></div>
-            <div class="msg">Mil gaya thanks 🔥🫶</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#7a3dff">D</div>
-          <div>
-            <div class="meta"><span class="name">DeepakIndl</span><span class="when">2s ago</span></div>
-            <div class="msg">Redeem code mil gaya yr ❤️😍</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#d4552a">R</div>
-          <div>
-            <div class="meta"><span class="name">Rohan_Zone270</span><span class="when">3s ago</span></div>
-            <div class="msg">Mujhe to yakeen hi nahi ho raha sach me mil Gaya yr 💋😍</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#8a3ad4">X</div>
-          <div>
-            <div class="meta"><span class="name">xKrishna387</span><span class="when">5s ago</span></div>
-            <div class="msg">Thanks Bhai 🫶</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#3aa0c8">A</div>
-          <div>
-            <div class="meta"><span class="name">Aarav2010</span><span class="when">6s ago</span></div>
-            <div class="msg">₹4999 ka redeem code mil gaya ❤️</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#c9a227">S</div>
-          <div>
-            <div class="meta"><span class="name">sumit6764</span><span class="when">8s ago</span></div>
-            <div class="msg">Thnx mil gaya bhai 🎁❤️</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="avatar" style="background:#e23d6d">R</div>
-          <div>
-            <div class="meta"><span class="name">ravi2694</span><span class="when">9s ago</span></div>
-            <div class="msg">Bhai Maine claim kar liya 🎁🔥</div>
-          </div>
-        </div>
-      </div>
-      <button class="more" type="button" id="moreBtn">⌄ Scroll for more</button>
-    </section>
-    </section>
-
-    <footer>
-      © 2026 — Demo Website<br />
-      Independent UI demo. Not affiliated with any store, game, brand, or payment provider.
-    </footer>
-
-    <div class="wa-wrap">
-      <a
-        class="wa"
-        href="https://whatsapp.com/channel/0029VbDR76ZA2pLF7guwa42D"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Join WhatsApp Channel"
-      >
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 3.2a8.3 8.3 0 00-7.2 12.4L4 21l5.5-.8A8.3 8.3 0 1012 3.2z" fill="#fff"/>
-          <path d="M9.2 8.7c.2-.5.3-.5.6-.5h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.4.5c-.1.2 0 .4.2.6.3.4.8.9 1.3 1.2.3.2.5.2.7 0l.5-.4c.2-.1.4-.1.6 0l1.6.8c.3.1.4.3.4.5v.5c0 .3 0 .4-.5.6-1 .4-2.3.2-3.8-.8-1.6-1.1-2.7-2.7-3-4.2-.1-.6 0-1.2.2-1.6z" fill="#25d366"/>
+    <footer>© 2026 Garena Free Fire Team • Gaming Community</footer>
+    <div class="scroll-space"></div>
+    <div class="wa-dock" id="waDock">
+      <a class="wa" href="https://whatsapp.com/channel/0029VbDR76ZA2pLF7guwa42D">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.15 6.4 2.15 11.83c0 1.74.46 3.44 1.34 4.94L2 22l5.39-1.41a10.1 10.1 0 0 0 4.65 1.12h.01c5.46 0 9.89-4.4 9.89-9.83C21.94 6.4 17.5 2 12.04 2zm5.76 13.95c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.81-.11-.42-.14-.95-.31-1.64-.6-2.88-1.24-4.76-4.14-4.9-4.33-.14-.19-1.16-1.54-1.16-2.94 0-1.4.73-2.09 1-2.37.26-.28.57-.35.76-.35h.55c.17 0 .41-.07.64.49.24.58.81 2 .88 2.15.07.14.12.33.02.52-.09.19-.14.31-.28.48-.14.17-.29.37-.42.5-.14.14-.28.28-.12.55.16.26.7 1.16 1.51 1.88 1.04.92 1.91 1.21 2.18 1.35.26.14.42.12.58-.07.16-.19.66-.77.84-1.03.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.12.43.19.49.29.07.1.07.6-.17 1.28z"/>
         </svg>
         Join WhatsApp Channel
       </a>
     </div>
-  </div>
-
-  <div class="toast" id="toast" role="status"></div>
-
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-card">
-      <h3 id="modalTitle">Demo preview only</h3>
-      <p id="modalText">This page is a front-end design demo. No real redeem codes, payments, or channels are connected.</p>
-      <button type="button" id="closeModal">Got it</button>
-    </div>
-  </div>
+  </main>
 
   <script>
     (function () {
-      const liveEl = document.getElementById("liveCount");
-      const watchEl = document.getElementById("watchingCount");
-      const claimsEl = document.getElementById("claimsCount");
-      const feed = document.getElementById("feed");
-      const toast = document.getElementById("toast");
-      const modal = document.getElementById("modal");
-      const modalText = document.getElementById("modalText");
+      var VIDEO = "https://www.image2url.com/r2/default/videos/1790946069462-9c577c22-b13b-4418-b525-feab41182062.mp4";
+      var video = document.getElementById("preview");
+      video.src = VIDEO;
+      video.loop = true;
+      video.volume = 1;
+      video.muted = false;
+      video.defaultMuted = false;
+      video.controls = true;
+      video.setAttribute("playsinline", "");
+      video.setAttribute("webkit-playsinline", "");
+      video.setAttribute("controlsList", "nodownload");
+      video.removeAttribute("muted");
 
-      let live = 1292;
-      let watching = 1521;
-      let claims = 4681;
-
-      const format = (n) => n.toLocaleString("en-IN");
-      const tickNumber = (current, minDelta, maxDelta, floor) => {
-        const delta = Math.floor(Math.random() * (maxDelta - minDelta + 1)) + minDelta;
-        const dir = Math.random() > 0.35 ? 1 : -1;
-        return Math.max(floor, current + dir * delta);
-      };
-
-      const updateCounters = () => {
-        live = tickNumber(live, 1, 6, 1200);
-        watching = tickNumber(watching, 1, 8, 1400);
-        if (Math.random() > 0.45) claims += Math.floor(Math.random() * 17) + 3;
-        liveEl.textContent = format(live);
-        watchEl.textContent = format(watching);
-        claimsEl.textContent = format(claims);
-      };
-
-      const colors = ["#2f7bff", "#c9a227", "#7a3dff", "#e23d6d", "#1f9d6a", "#d4552a", "#3aa0c8", "#8a3ad4"];
-      const names = ["Roh6458", "HDMohit16", "DeepakIndl", "Rohan_Zone270", "xKrishna387", "Aarav2010", "sumit6764", "ravi2694"];
-      const comments = [
-        "Ha bhai mil gaya ❤️‍🩹🫶",
-        "Mil gaya thanks 🔥🫶",
-        "Redeem code mil gaya yr ❤️😍",
-        "Mujhe to yakeen hi nahi ho raha sach me mil Gaya yr 💋😍",
-        "Thanks Bhai 🫶",
-        "₹4999 ka redeem code mil gaya ❤️",
-        "Thnx mil gaya bhai 🎁❤️",
-        "Bhai Maine claim kar liya 🎁🔥"
-      ];
-
-      const renderRow = (item, animate) => {
-        const row = document.createElement("div");
-        row.className = "row";
-        if (!animate) row.style.animation = "none";
-        const color = colors[item.name.charCodeAt(0) % colors.length];
-        row.innerHTML = `
-          <div class="avatar" style="background:${color}">${item.name.charAt(0).toUpperCase()}</div>
-          <div>
-            <div class="meta">
-              <span class="name">${item.name}</span>
-              <span class="when">${item.when}</span>
-            </div>
-            <div class="msg">${item.text}</div>
-          </div>
-        `;
-        return row;
-      };
-
-      let commentIndex = 0;
-      const addComment = () => {
-        const text = comments[commentIndex % comments.length];
-        const name = names[(commentIndex + 3) % names.length];
-        commentIndex += 1;
-        const row = renderRow({ name, when: "just now", text }, true);
-        feed.prepend(row);
-        while (feed.children.length > 8) feed.removeChild(feed.lastChild);
-      };
-
-      const showToast = (msg) => {
-        toast.textContent = msg;
-        toast.classList.add("show");
-        clearTimeout(showToast.t);
-        showToast.t = setTimeout(() => toast.classList.remove("show"), 2800);
-      };
-
-      const video = document.getElementById("promoVideo");
-      const card = document.querySelector(".media-card");
-      const timeChip = document.getElementById("timeChip");
-      const formatTime = (s) => {
-        if (!isFinite(s)) return "0:00";
-        const m = Math.floor(s / 60);
-        const sec = Math.floor(s % 60).toString().padStart(2, "0");
-        return m + ":" + sec;
-      };
-      const syncTime = () => {
-        timeChip.textContent = formatTime(video.currentTime || 0) + " / " + formatTime(video.duration || 0);
-      };
-
-      const playWithSound = () => {
+      function forceSound() {
         video.muted = false;
-        video.defaultMuted = false;
         video.volume = 1;
-        return video.play();
-      };
+        var p = video.play();
+        if (p && p.then) {
+          return p.then(function () { return !video.muted; }).catch(function () { return false; });
+        }
+        return Promise.resolve(!video.paused);
+      }
 
-      const startVideo = () => {
-        video.muted = false;
-        video.defaultMuted = false;
-        video.volume = 1;
-        playWithSound().then(() => {
-          card.classList.add("playing");
-        }).catch(() => {
-          // Browsers block autoplay with sound until the user taps.
-          // Never fall back to muted playback.
-          card.classList.remove("playing");
-          timeChip.textContent = "Tap to play with sound";
+      function boot() {
+        forceSound().then(function (ok) {
+          if (!ok) {
+            video.muted = true;
+            video.play().then(function () { video.muted = false; video.volume = 1; }).catch(function () {});
+          }
         });
-      };
+      }
 
-      video.addEventListener("timeupdate", syncTime);
-      video.addEventListener("loadedmetadata", syncTime);
-      video.addEventListener("playing", () => card.classList.add("playing"));
-      video.addEventListener("play", () => card.classList.add("playing"));
-      video.addEventListener("pause", () => {
-        if (video.currentTime < 0.2) card.classList.remove("playing");
+      function unlock() {
+        video.muted = false;
+        video.volume = 1;
+        if (video.paused) video.play().catch(function () {});
+      }
+
+      document.addEventListener("pointerdown", unlock, { passive: true });
+      document.addEventListener("touchstart", unlock, { passive: true });
+      document.addEventListener("click", unlock);
+      window.addEventListener("focus", boot);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) boot();
       });
-      video.addEventListener("error", () => {
-        showToast("Video file nahi mili. lv_0_20260928135520.mp4 ko index.html ke saath same folder me rakho.");
+      window.addEventListener("pageshow", boot);
+
+      document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+      document.addEventListener("dragstart", function (e) { e.preventDefault(); });
+      var imgs = document.querySelectorAll("img");
+      for (var i = 0; i < imgs.length; i++) {
+        imgs[i].setAttribute("draggable", "false");
+        imgs[i].addEventListener("touchstart", function (e) {
+          if (e.touches && e.touches.length > 1) e.preventDefault();
+        }, { passive: false });
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === "s" || e.key === "S")) e.preventDefault();
       });
 
-      startVideo();
-      video.addEventListener("canplay", startVideo, { once: true });
-      video.addEventListener("loadeddata", startVideo, { once: true });
-
-      const unlockSound = () => {
-        playWithSound().catch(() => {});
-      };
-      ["pointerdown", "touchstart", "click", "keydown"].forEach((evt) => {
-        document.addEventListener(evt, unlockSound, { once: true, passive: true });
-      });
-
-      document.getElementById("playBtn").addEventListener("click", (e) => {
-        e.preventDefault();
-        startVideo();
-      });
-
-      document.getElementById("moreBtn").addEventListener("click", addComment);
-
-      setInterval(updateCounters, 2200);
-      setInterval(addComment, 3800);
+      if (video.readyState >= 2) boot();
+      else video.addEventListener("canplay", boot, { once: true });
+      boot();
+      setTimeout(boot, 400);
+      setTimeout(boot, 1200);
     })();
   </script>
 </body>
