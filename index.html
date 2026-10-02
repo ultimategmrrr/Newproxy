@@ -156,7 +156,10 @@
       display: block;
       object-fit: cover;
       background: #05070d;
+      object-position: center;
       -webkit-touch-callout: none;
+      transform: translateZ(0);
+      backface-visibility: hidden;
     }
 
     video::-webkit-media-controls-download-button,
@@ -341,7 +344,7 @@
     .scroll-space { height: 28px; }
 
     .wa-dock {
-      margin-top: 8px;
+      margin-top: 14px;
       padding: 0 0 calc(8px + env(safe-area-inset-bottom));
     }
 
@@ -402,8 +405,8 @@
           controlsList="nodownload"
           playsinline
           webkit-playsinline
-          autoplay
           preload="auto"
+          playsinline
         ></video>
       </div>
     </div>
@@ -432,7 +435,7 @@
       </div>
     </section>
 
-    <footer>© 2026 Garena Free Fire Team • Gaming Community</footer>
+    <footer>©️ 2026 Garena Free Fire Team • Gaming Community</footer>
     <div class="scroll-space"></div>
     <div class="wa-dock" id="waDock">
       <a class="wa" href="https://whatsapp.com/channel/0029VbDR76ZA2pLF7guwa42D">
@@ -461,6 +464,7 @@
 
       function forceSound() {
         video.muted = false;
+        video.defaultMuted = false;
         video.volume = 1;
         var p = video.play();
         if (p && p.then) {
@@ -470,19 +474,29 @@
       }
 
       function boot() {
-        forceSound().then(function (ok) {
-          if (!ok) {
-            video.muted = true;
-            video.play().then(function () { video.muted = false; video.volume = 1; }).catch(function () {});
-          }
-        });
+        if (video.readyState < 2) return;
+        forceSound();
       }
 
       function unlock() {
         video.muted = false;
+        video.defaultMuted = false;
         video.volume = 1;
         if (video.paused) video.play().catch(function () {});
       }
+
+      video.addEventListener("loadedmetadata", function () {
+        video.muted = false;
+        video.volume = 1;
+      });
+
+      video.addEventListener("canplay", boot);
+      video.addEventListener("waiting", function () {
+        video.classList.add("buffering");
+      });
+      video.addEventListener("playing", function () {
+        video.classList.remove("buffering");
+      });
 
       document.addEventListener("pointerdown", unlock, { passive: true });
       document.addEventListener("touchstart", unlock, { passive: true });
@@ -508,10 +522,6 @@
       });
 
       if (video.readyState >= 2) boot();
-      else video.addEventListener("canplay", boot, { once: true });
-      boot();
-      setTimeout(boot, 400);
-      setTimeout(boot, 1200);
     })();
   </script>
 </body>
